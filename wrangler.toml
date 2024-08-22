@@ -1,0 +1,20 @@
+name = "cloudflare-reverse-proxy"
+compatibility_date = "2023-12-01"
+
+[env.production]
+name = "cloudflare-reverse-proxy"
+routes = [
+  { pattern = "p.zecdn.top", custom_domain = true },
+]
+
+[env.production.vars]
+MODE = "production"
+TARGET_UPSTREAM = ""
+
+[env.staging]
+name = "cloudflare-reverse-proxy-staging"
+# route = { pattern = "p-staging.zecdn.top", custom_domain = true }
+
+[env.staging.vars]
+MODE = "staging"
+TARGET_UPSTREAM = ""
