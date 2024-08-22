@@ -1,9 +1,9 @@
 {
-  "name": "cloudflare-docker-proxy",
+  "name": "cloudflare-reverse-proxy",
   "private": true,
   "description": "",
   "version": "1.0.0",
-  "author": "ciiiii <allen.cccccnm@gmail.com>",
+  "author": "jiange1236",
   "dependencies": {},
   "devDependencies": {
     "prettier": "^2.4.1",
@@ -14,8 +14,8 @@
   "scripts": {
     "format": "prettier --write '**/*.{js,css,json,md}'",
     "build": "webpack",
-    "dev": "wrangler dev src/index.js --env dev"
+    "dev": "wrangler dev _worker.js --env dev"
   },
   "license": "MIT",
-  "main": "src/index.js"
+  "main": "_worker.js"
 }
